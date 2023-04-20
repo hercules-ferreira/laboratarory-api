@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exams",
+  "info": {
+    "singularName": "exam",
+    "pluralName": "exams",
+    "displayName": "exam",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "examname": {
+      "type": "string"
+    },
+    "examcode": {
+      "type": "biginteger"
+    },
+    "examvalue": {
+      "type": "decimal"
+    },
+    "deliverytime": {
+      "type": "biginteger"
+    },
+    "informationexame": {
+      "type": "string"
+    },
+    "collectiondate": {
+      "type": "date"
+    },
+    "receivedexam": {
+      "type": "date"
+    },
+    "numbercardsus": {
+      "type": "biginteger"
+    },
+    "databirth": {
+      "type": "date"
+    },
+    "nameclient": {
+      "type": "string"
+    },
+    "passwordexam": {
+      "type": "text"
+    },
+    "customers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer.customer",
+      "mappedBy": "exam"
+    }
+  }
+}

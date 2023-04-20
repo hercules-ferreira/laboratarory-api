@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nameclient": {
+      "type": "string"
+    },
+    "namesocial": {
+      "type": "string"
+    },
+    "namemother": {
+      "type": "string"
+    },
+    "databirth": {
+      "type": "date"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "string"
+    },
+    "medicalrecordnumber": {
+      "type": "string"
+    },
+    "numbercardsus": {
+      "type": "biginteger"
+    },
+    "informationclient": {
+      "type": "string"
+    },
+    "exam": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::exam.exam",
+      "inversedBy": "customers"
+    }
+  }
+}
